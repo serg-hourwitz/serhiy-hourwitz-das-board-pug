@@ -1,0 +1,28 @@
+body {
+  font-family: var(--f-main);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-medium);
+  color: var(--c-main);
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+

@@ -1,0 +1,20 @@
+{
+  "name": "my-pug-dashboard",
+  "version": "1.0.0",
+  "description": "my pug developed dashboard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pug -w src/index.pug --out ."
+  },
+  "keywords": [
+    "pug",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Serhiy Hourwitz shmone800@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^3.0.3"
+  }
+}
