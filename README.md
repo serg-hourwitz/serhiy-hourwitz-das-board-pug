@@ -1,2 +1,2 @@
-# serhiy-hourwitz-das-board-pug
+# serhiy-hourwitz-dashboard-pug
 test assignment for Glivera Team
