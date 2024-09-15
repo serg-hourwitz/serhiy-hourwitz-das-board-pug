@@ -1,122 +1,33 @@
+include table.pug
+
 mixin section()
   .section
-      .section__main.customers.section__main-inactive
-        .section__header
-          .section__header-section__header-title-wrapper
-            .section__header-title All Customers
-            .section__header-subtitle Active Members
-          .search
-            search__label.search__search__label
-              img.search__img(src='./assets/img/search.svg' alt='search')
-              input.search__input(type='text' placeholder='Search')
-        // * table
-        .customers__table-wrapper
-          table.customers__table
-            thead
-              tr.customers-table-header
-                th.customer-name(scope='col') Customer Name
-                th.company(scope='col') Company
-                th.phone-number(scope='col') Phone Number
-                th.email(scope='col') Email
-                th.country(scope='col') Country
-                th.status(scope='col') Status
-            tbody
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Jane Cooper
-                td(data-search__label='Company') Microsoft
-                td(data-search__label='Phone') (225) 555-0118
-                td(data-search__label='Mail') jane@microsoft.com
-                td(data-search__label='Country') United States
-                td.status-btn(data-search__label='Button')
-                  button.btn-active(onclick='toggleButton(this)' type='button')
-                    | Active
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Floyd Miles
-                td(data-search__label='Company') Yahoo
-                td(data-search__label='Phone') (205) 555-0100
-                td(data-search__label='Mail') floyd@yahoo.com
-                td(data-search__label='Country') Kiribati
-                td.status-btn(data-search__label='Button')
-                  button.btn-inactive(onclick='toggleButton(this)' type='button')
-                    | Inactive
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Ronald Richards
-                td(data-search__label='Company') Adobe
-                td(data-search__label='Phone') (302) 555-0107
-                td(data-search__label='Mail') ronald@adobe.com
-                td(data-search__label='Country') Israel
-                td.status-btn(data-search__label='Button')
-                  button.btn-inactive(onclick='toggleButton(this)')
-                    | Inactive
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Marvin McKinney
-                td(data-search__label='Company') Tesla
-                td(data-search__label='Phone') (252) 555-0126
-                td(data-search__label='Mail') marvin@tesla.com
-                td(data-search__label='Country') Iran
-                td.status-btn(data-search__label='Button')
-                  button.btn-active(onclick='toggleButton(this)' type='button')
-                    | Active
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Jerome Bell
-                td(data-search__label='Company') Google
-                td(data-search__label='Phone') (629) 555-0129
-                td(data-search__label='Mail') jerome@google.com
-                td(data-search__label='Country') R&eacute;union
-                td.status-btn(data-search__label='Button')
-                  button.btn-active(onclick='toggleButton(this)' type='button')
-                    | Active
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Kathryn Murphy
-                td(data-search__label='Company') Microsoft
-                td(data-search__label='Phone') (406) 555-0120
-                td(data-search__label='Mail') kathryn@microsoft.com
-                td(data-search__label='Country') Cura&ccedil;ao
-                td.status-btn(data-search__label='Button')
-                  button.btn-active(onclick='toggleButton(this)' type='button')
-                    | Active
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Jacob Jones
-                td(data-search__label='Company') Yahoo
-                td(data-search__label='Phone') (208) 555-0112
-                td(data-search__label='Mail') jacob@yahoo.com
-                td(data-search__label='Country') Brazil
-                td.status-btn(data-search__label='Button')
-                  button.btn-active(onclick='toggleButton(this)' type='button')
-                    | Active
-              tr
-                td.first-in-line(data-search__label='Name')
-                  | Kristin Watson
-                td(data-search__label='Company') Facebook
-                td(data-search__label='Phone') (704) 555-0127
-                td(data-search__label='Mail') kristin@facebook.com
-                td(data-search__label='Country') &angst;land Islands
-                td.status-btn(data-search__label='Button')
-                  button.btn-inactive(onclick='toggleButton(this)' type='button')
-                    | Inactive
-        // * Footer
-        footer.footer
-          // * info
-          .footer-info
-            | Showing data 1 to 8 of 256K entries
-          // * pagination
-          .pagination
-            button#prev.pagination__arrow
-              svg.icon.icon-arrow-left
-                use(xlink:href='#icon-arrow-left')
-            button.pagination__button 1
-            button.pagination__button.active 2
-            button.pagination__button 3
-            button.pagination__button 4
-            button.pagination__button ...
-            button.pagination__button 40
-            button#next.pagination__arrow
-              svg.icon.icon-arrow-right
-                use(xlink:href='#icon-arrow-right')
+    .section__main.customers.section__main-inactive
+      .section__header
+        .section__header-section__header-title-wrapper
+          .section__header-title All Customers
+          .section__header-subtitle Active Members
+        .search
+          search__label.search__search__label
+            img.search__img(src='./assets/img/search.svg' alt='search')
+            input.search__input(type='text' placeholder='Search')
+    +table
+      // * Footer
+      footer.footer
+        // * info
+        .footer-info
+          | Showing data 1 to 8 of 256K entries
+        // * pagination
+        .pagination
+          button#prev.pagination__arrow
+            svg.icon.icon-arrow-left
+              use(xlink:href='#icon-arrow-left')
+          button.pagination__button 1
+          button.pagination__button.active 2
+          button.pagination__button 3
+          button.pagination__button 4
+          button.pagination__button ...
+          button.pagination__button 40
+          button#next.pagination__arrow
+            svg.icon.icon-arrow-right
+              use(xlink:href='#icon-arrow-right')
