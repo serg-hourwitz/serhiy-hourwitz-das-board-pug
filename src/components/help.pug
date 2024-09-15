@@ -1,9 +1,5 @@
-include search.pug
+include sectionHeader.pug
 
 mixin help()
   .section__main.help.section__main-inactive
-    .section__header
-      .section__header-title-wrapper
-        .section__header-title Help
-        .section__header-subtitle Active Members
-      +search
+    +sectionHeader('Help')

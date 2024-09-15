@@ -1,13 +1,9 @@
-include search.pug
+include sectionHeader.pug
 include table.pug
 include footer.pug
 
 mixin customers()
   .section__main.customers.section__main-inactive
-    .section__header
-      .section__header-section__header-title-wrapper
-        .section__header-title All Customers
-        .section__header-subtitle Active Members
-      +search
+    +sectionHeader('All Customers')
     +table
     +footer

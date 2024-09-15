@@ -1,0 +1,8 @@
+include search.pug
+
+mixin sectionHeader(title)
+  .section__header
+    .section__header-title-wrapper
+      .section__header-title= title  // Динамічний заголовок
+      .section__header-subtitle Active Members
+    +search  
