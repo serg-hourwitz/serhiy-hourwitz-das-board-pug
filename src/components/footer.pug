@@ -1,0 +1,19 @@
+mixin footer()
+  footer.footer
+    // * info
+    .footer-info
+      | Showing data 1 to 8 of 256K entries
+    // * pagination
+    .pagination
+      button#prev.pagination__arrow
+        svg.icon.icon-arrow-left
+          use(xlink:href='#icon-arrow-left')
+      button.pagination__button 1
+      button.pagination__button.active 2
+      button.pagination__button 3
+      button.pagination__button 4
+      button.pagination__button ...
+      button.pagination__button 40
+      button#next.pagination__arrow
+        svg.icon.icon-arrow-right
+          use(xlink:href='#icon-arrow-right')
