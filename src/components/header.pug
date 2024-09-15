@@ -1,2 +1,16 @@
 mixin header()
- 
+  header.header
+      // * logo
+      .header__logo
+        svg.icon.header__logo-icon
+          use(xlink:href='#icon-logo')
+        span.header__logo-title Dashboard
+        span.header__logo-version v.01
+      // * greeting
+      .header__greeting
+        .header__greeting-title Hello Evano &#x1F44B;&#x1F3FC;
+        .burger__menu
+          button.burger-icon
+            img(src='./assets/img/menu.svg' alt='burger')
+          button.close-icon
+            img(src='./assets/img/close.svg' alt='close')
