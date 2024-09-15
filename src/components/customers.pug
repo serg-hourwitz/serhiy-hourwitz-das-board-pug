@@ -1,5 +1,6 @@
 include table.pug
 include footer.pug
+include search.pug
 
 mixin customers()
   .section__main.customers.section__main-inactive
@@ -7,9 +8,6 @@ mixin customers()
       .section__header-section__header-title-wrapper
         .section__header-title All Customers
         .section__header-subtitle Active Members
-      .search
-        search__label.search__search__label
-          img.search__img(src='./assets/img/search.svg' alt='search')
-          input.search__input(type='text' placeholder='Search')
+      +search
     +table
     +footer
