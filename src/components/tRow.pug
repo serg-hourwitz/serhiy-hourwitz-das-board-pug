@@ -1,0 +1,15 @@
+mixin tRow(name, company, phone, mail, country, status)
+  tr
+    td.first-in-line(data-search__label='Name')
+      | #{name}
+    td(data-search__label='Company')
+      | #{company}
+    td(data-search__label='Phone')
+      | #{phone}
+    td(data-search__label='Mail')
+      | #{mail}
+    td(data-search__label='Country')
+      | #{country}
+    td.status-btn(data-search__label='Button')
+      button(class=status ? 'btn-active' : 'btn-inactive', onclick='toggleButton(this)', type='button')
+        | #{status ? 'Active' : 'Inactive'}
