@@ -1,0 +1,8 @@
+mixin navItem(linkClass, iconStart, iconEnd, text)
+  li.nav__list-item
+    a.nav__link(class=linkClass)
+      svg.icon(class=iconStart + ' start')
+        use(xlink:href='#' + iconStart)
+      span #{text}
+      svg.icon(class=iconEnd)
+        use(xlink:href='#' + iconEnd)
