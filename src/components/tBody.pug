@@ -1,0 +1,13 @@
+include tRow.pug
+
+
+mixin tBody()
+  tbody
+    +tableRow('Jane Cooper', 'Microsoft', '(225) 555-0118', 'jane@microsoft.com', 'United States', true)
+    +tableRow('Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati', false)
+    +tableRow('Ronald Richards', 'Adobe', '(302) 555-0107', 'ronald@adobe.com', 'Israel', false)
+    +tableRow('Marvin McKinney', 'Tesla', '(252) 555-0126', 'marvin@tesla.com', 'Iran', true)
+    +tableRow('Jerome Bell', 'Google', '(629) 555-0129', 'jerome@google.com', 'R&eacute;union', true)
+    +tableRow('Kathryn Murphy', 'Microsoft', '(406) 555-0120', 'kathryn@microsoft.com', 'Cura&ccedil;ao', true)
+    +tableRow('Jacob Jones', 'Yahoo', '(208) 555-0112', 'jacob@yahoo.com', 'Brazil', true)
+    +tableRow('Kristin Watson', 'Facebook', '(704) 555-0127', 'kristin@facebook.com', '&angst;land Islands', false)
